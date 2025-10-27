@@ -1,0 +1,79 @@
+body {
+      background-image: url('../imagenes/mis_practicas_fondo.jpg'); /* Establece una imagen como fondo de toda la página */
+      background-size: cover;     /* La imagen cubre toda la pantalla */
+      background-repeat: no-repeat; /* evita que la imagen se repite */
+      background-position: center;  /* Centra la imagen */
+      background-attachment: fixed; /* Fija al hacer scroll */
+      margin: 0; /* Quita márgenes por defecto */
+      height: 100vh; /* Asegura altura completa de la ventana */
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+    text-transform: uppercase;/* poner todas las letras en mayusculas*/
+}
+
+/* Contenedor principal con dos columnas */
+.contenedor {
+      display: flex; /* Coloca elementos hijos (imagen y lista) en línea */
+      flex-wrap: wrap; /* Permite que los elementos salten a otra línea si no caben */
+      justify-content: center; /* Centra horizontalmente el contenido */
+      align-items: flex-start; /* Alinea los elementos por la parte superior */
+      padding: 30px; /* Espacio interior entre los bordes del contenedor y su contenido */
+      gap: 10px; /* Espacio entre los elementos (la imagen y la lista) */
+ }
+
+/* Columna izquierda: imagen */
+.imagen {
+      background-color: white; /* Fondo blanco detrás de la imagen */
+      border-radius: 15px; /* Bordes redondeados */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra*/
+      display: flex;
+      justify-content: center; /* Centra la imagen horizontalmente */
+      align-items: center; /* Centra la imagen verticalmente */
+      height: 400px; /* Altura fija del contenedor de la imagen */
+      padding: 10px; /* Espacio interno alrededor de la imagen */
+}
+
+.imagen img {
+      width: 100%; /* Ocupa todo el ancho del contenedor */
+      height: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border: 1px solid green; /* Borde alrededor de la imagen */
+      object-fit: cover;    /* Ajusta la imagen sin deformar */  
+}
+
+/* Columna derecha: lista */
+.lista {
+      flex: 1 1 300px; /* Hace que la columna se adapte al espacio disponible, con un tamaño mínimo px */
+      background-color: white; /* color de fondo*/
+      border-radius: 15px; /* Bordes redondeados */
+      padding: 25px; /* Espacio interno */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.lista ul {
+      list-style-type: none; /* Quita los puntos de la lista */
+      padding: 0; /* Elimina espacio interno del <ul> */
+      margin: 0; /* Elimina margen exterior */
+}
+
+.lista li {
+      margin: 10px 0; /* Espacio entre los elementos de la lista */
+      background-color: #e0efe0;
+      padding: 10px 15px; /* Espaciado interno del texto */
+      border-radius: 8px;
+      transition: background 0.3s; /* Efecto de transición suave al pasar el ratón */
+}
+
+.lista li:hover {
+      background-color: #e0f1cc; /* Cambia el color de fondo al pasar el cursor */
+}
+
+.lista a {
+      text-decoration: none; /* Quita el subrayado del enlace */
+      color: #2b5102;
+      font-weight: bold; /* Texto en negrita */
+}
