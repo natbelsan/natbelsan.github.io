@@ -47,4 +47,13 @@ img {
       width:30%;
       object-fit: cover;    /* Ajusta la imagen sin deformar */  
 }
+table {
+      border-collapse: collapse; /*hace que los bordes de las celdas se fusionen, en lugar de mostrarse dobles.*/
+      border-color: black;
+      padding: 10px;
+}
+th, td {
+  padding: 12px;/* Espacio interno entre texto y borde */
+  text-align: center;/* Centra el contenido */
+}
 

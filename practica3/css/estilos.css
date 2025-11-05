@@ -1,0 +1,47 @@
+/*Tenemos que centrarlo, haremos que la imagen de fondo rellene
+completamente la página SIN repetirse y además usaremos una propiedad para
+impedir el desplazamiento si la página no cabe.*/
+body {
+    background-image: url("../images/fondo.jpg"); 
+    background-attachment: fixed;/*la imagen se queda fija aunque hagas scroll*/
+    background-repeat: no-repeat; /*no se repite la imagen*/
+    background-position: top center; /*centrar la imagen*/
+    text-align: center;/*centrar contenido*/
+    background-size: cover;/*la imagen de fondo ocupa el total de la pantalla*/
+    font-family:'Saira Semi Condensed', sans-serif;
+}
+/* cambiaremos el color de fondo, el color del texto y pondremos un borde
+lateral de otro color.*/
+h1 {
+    background-color:rgb(161, 161, 161);
+    color: white;
+    border-color: rgb(255, 68, 0);
+    border-left-style: solid;
+    border-left-width: 15px; /*borde a la izq*/
+}
+
+img {
+    border: 5px black solid; /*borde imagen*/
+    border-radius: 5%;/*borde radio*/
+    box-shadow: 10px 5px 5px black; /*sombra imagen*/
+    height: 500px;
+}
+
+ul {
+    list-style-type: none;/*sin puntos en la lista*/
+    padding: 5px;
+}
+
+li {
+    border: 2px black solid; /*borde*/
+    display: inline;/*sepacion en horizontal, sin salto de linea*/  
+    padding: 5px;
+}
+
+.macondo-regular {
+  font-family: "Macondo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
