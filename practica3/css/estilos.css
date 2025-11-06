@@ -8,40 +8,49 @@ body {
     background-position: top center; /*centrar la imagen*/
     text-align: center;/*centrar contenido*/
     background-size: cover;/*la imagen de fondo ocupa el total de la pantalla*/
-    font-family:'Saira Semi Condensed', sans-serif;
+    font-family:'Saira Semi Condensed', sans-serif, 'Source Sans Pro';
+    height: 100vh; /* Asegura altura completa de la ventana */
+    margin: 0; /* Quita márgenes por defecto */
+    padding: 30px; /*Añade espacio interior en los bordes */
 }
 /* cambiaremos el color de fondo, el color del texto y pondremos un borde
 lateral de otro color.*/
 h1 {
-    background-color:rgb(161, 161, 161);
+    background-image: url("../images/fondo.jpg");
     color: white;
-    border-color: rgb(255, 68, 0);
-    border-left-style: solid;
-    border-left-width: 15px; /*borde a la izq*/
+    border-color: rgb(255, 0, 238);
+    border-style: solid;
+    border-width: 2px; 
 }
 
 img {
-    border: 5px black solid; /*borde imagen*/
+    border: 2px rgb(242, 126, 203) solid; /*borde imagen*/
     border-radius: 5%;/*borde radio*/
-    box-shadow: 10px 5px 5px black; /*sombra imagen*/
+    box-shadow: 7px 5px 5px rgb(251, 173, 96); /*sombra imagen*/
     height: 500px;
+    object-fit: cover;    /* Ajusta la imagen sin deformar */ 
 }
 
 ul {
     list-style-type: none;/*sin puntos en la lista*/
     padding: 5px;
+    
 }
 
 li {
-    border: 2px black solid; /*borde*/
+    border: 2px rgb(255, 0, 238) solid; /*borde*/
     display: inline;/*sepacion en horizontal, sin salto de linea*/  
     padding: 5px;
 }
 
-.macondo-regular {
-  font-family: "Macondo", cursive;
-  font-weight: 400;
-  font-style: normal;
+li a {
+  text-decoration: none; /*Quita el subrayado */
+  font-weight: bold;    
 }
+
+li a:hover {
+  text-decoration: underline; 
+}
+
 
 
