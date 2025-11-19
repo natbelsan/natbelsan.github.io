@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: #F1F0FF;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+img {
+  border: 5px solid black;
+}
+
+ul {
+
+}
+
+li {
+  display: inline;/*sepacion en horizontal, sin salto de linea*/
+}
+
+p {
+  
+}
+
+#header {
+  border-bottom: 5px black solid;
+  background-color: #C3C3E5;
+  text-align: center; 
+}
+
+#content{
+  
+}
+
+#text {
+  width: 90%;/* Los tres párrafos rellenan el 90% de la ventana.*/
+  margin: 0 auto; /* para centrar */  
+}
+
+#text p {
+  border: 5px dashed black;
+  padding: 10px; /* Los párrafos no rellenan completamente la caja asignada, deben estar separados 10px. */
+  box-shadow: 5px 5px 5px black; /* Sombra en los párrafos */
+  text-indent: 40px; /*Sangría en primera línea */
+  background-color: #c3c3e5;
+}
+
+#text p:first-child {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: url("../images/fondoParrafo.png");
+  background-repeat: repeat;
+}
+
+#text p:last-child {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+#menu {
+  text-align: center;
+}
+
+#menu a{
+  text-decoration: none; /*Quita el subrayado */
+  color: #8C489F;
+  padding-left: 0.5em;
+  padding-bottom: 8px; /* margen interno debajo del texto */
+}
+
+#menu li{
+  border-left: 5px red solid; /*Línea roja a la izquierda de cada opción */
+}
+
+#menu li a:hover{
+  border-bottom: 5px red solid; /*Linea roja debajo de cada opcion al pasar el cursor*/
+}
+
+#footer{
+  background-color: #443266;
+  color: white;
+  text-align: center;
+  border-top:5px solid black;
+}
+
+#footer a{
+  color: white;
+}
+
+#footer a:hover{
+  background-color: white;
+  color: gray;
+}
+#image {
+  text-align: right;   /* Alinea la imagen dentro del div */
+  margin-right: 60px;  /* Separación de 60px del borde derecho */
+  margin-top: 10px;
+}
+
+@media all and (max-width: 500px) {
+   img {
+    border: 5px solid red; /*El borde de la imagen cambia a rojo.*/  
+  }
+
+  #image {
+    text-align: center; /*La imagen debe aparecer en el centro de la ventana.*/
+    width: 100%; 
+    float: none; 
+  }
+
+  #image img {
+    width: 90%; /*El tamaño que ocupa la imagen debe ser el 90% */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
