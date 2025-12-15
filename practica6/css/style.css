@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2a7f7f;
+    color: white;
+    text-align: center;
+    padding: 1em; /* Espaciado interno del header */
+}
+
+h1 {
+    margin: 0; /* Elimina espacios verticales alrededor del título */
+}
+
+.formulario {
+    background-color: #fff;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centrado horizontal y separación superior */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados del formulario */
+    box-shadow: 0 0 10px lightgray; /* Sombra suave alrededor */    
+}
+
+.formulario ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0; /* Borra padding interno */
+}
+
+.formulario li {
+    margin-bottom: 20px; /* Separa cada campo del formulario */
+}
+
+.formulario h2 {
+    color: #333;
+    border-bottom: 2px solid #2a7f7f; /* Línea decorativa debajo */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+}
+
+.formulario label {
+    display: block; /* Cada etiqueta ocupa una línea completa */
+    margin-bottom: 5px; /* Separación respecto al input */
+    font-weight: bold; /* Negrita para resaltar el nombre del campo */
+    font-size: 1.1em; 
+}
+
+/*.formulario input[type="text"],
+.formulario input[type="tel"],
+.formulario input[type="email"],
+.formulario input[type="url"],
+.formulario input[type="number"],
+.formulario input[type="file"], */
+.formulario input,
+.formulario textarea {
+    width: 95%; /* Los campos ocupan casi todo el ancho del formulario */
+    padding: 10px; /* Relleno interior */
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
+}
+
+.formulario textarea {
+    height: 100px; /* Altura fija del área de texto */
+}
+
+.formulario .obligatorio:after {
+    content: " *"; /* Añade un asterisco (campo obligatorio) al final del label */
+    color: #2a7f7f; 
+}
+
+.formulario button.submit {
+    background-color: #4682B4;
+    color: white;
+    padding: 12px 20px; /* Tamaño del botón */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Pone el cursor de “mano” */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Animación suave al pasar el ratón */
+}
+
+.formulario button.submit:hover {
+    background-color: #87ceeb; /* Color del botón al pasar el ratón */
+}
+
+footer { 
+    margin-top: 20px;
+    padding: 10px; /* Relleno interno */
+    background-color: #2a7f7f;
+    color: white;
+    /*incluido*/
+    display: flex;
+    align-items: center; /* Centra verticalmente los hijos */
+    /*text-align: center;*/
+    justify-content: center; /* Centra horizontalmente (ajusta según necesidad) */
+    justify-content: space-between; /*separar al maximo los hijos*/
+    gap: 20px; /* Espacio entre hijos */    
+}
+
+footer a {
+    color: #87ceeb;
+    text-decoration: none; /* Quita el subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline;  /* Aparece subrayado al pasar el ratón */
+}
+
+/*----- estilos visuales de los elementos --------*/ 
+.formulario input, .formulario textarea { 
+	border:1px solid #aaa;
+	border-radius: 5px;
+	color: #888;
+	font-size: 12px;
+    /*----- para ralentizar el que se haga grande la caja --------*/
+	padding-right:10px;
+	transition: padding .25s;  /* Animación para cuando se enfoca el input */
+}
+.formulario input:focus, .formulario textarea:focus { /*El focus ocurre cuando un elemento está activo y listo para recibir input del usuario.*/
+	background: #fff; 
+	border:1px solid #555; 
+	box-shadow: 0 0 3px #aaa; 
+	padding-right:30px; /* Aumenta el padding → crea un efecto visual */
+}
+
+/* === Estilos de Validacion === */	
+.formulario input:required:valid, .formulario textarea:required:valid { /*Son validos segun HTML5: Da estilo a los campos obligatorios que han sido rellenados correctamente.*/
+    border: 2px solid #4682b4;
+	border-color: #87ceeb;
+}
+.formulario input:focus:invalid, .formulario textarea:focus:invalid { /*Campos en los que el usuario está escribiendo (FOCUS) y contienen un error.*/
+	box-shadow: 5px 0px 0px #e9967a;
+    border: 2px  solid #e9967a;
+}
+
+.arte, .musica, .deporte, .entretenimiento, 
+.naturaleza, .cultura, .planes, .vida, .pais, 
+.ciudad, .empresa, .cargo, .estado, .busco , 
+.sexualidad, .hijos, .idiomas{
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+footer img{
+    border-radius: 50%;/* redondear la imagen*/
+    width: 50px;
+    height: 50px;
+}
+
+.formulario input[type="checkbox"],
+.formulario input[type="radio"]{
+  flex-shrink: 0;  /* Evita que el checkbox/radio se reduzca */
+  width: 16px;     /* Tamaño fijo para checkbox */
+  height: 16px;  
+}
+
+.formulario legend {
+  display: block;/* Para que ocupe toda la línea */
+  margin-bottom: 12px;    
+  margin-top: 12px;
+  font-weight: bold;      
+  color: #4682B4;       
+  font-size: 0.9em;       
+}
+
+.formulario select { /*lista desplegable de opciones*/
+    width: 95%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+
+
+   

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulario app citas</title>
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="imagenes/nbslogo.png">
+	</head>
+<body>
+  <header>
+    <h1>Formulario app de citas</h1>
+  </header> 
+  <form class="formulario" action="#" method="post"> <!-- action="#" significa que no enviará datos a un servidor --> <!-- method="post" indica que enviará los datos de forma segura -->
+      <ul>
+         <li>
+              <h2>Perfil</h2>
+         </li>
+         <li>
+             <label for="name" class="obligatorio">Nombre</label>
+             <input type="text" name="name" placeholder="Natalia" required autofocus />  
+             <!-- required obliga a rellenarlo para enviar --> <!-- autofocus coloca el cursor automáticamente aquí al cargar la página -->
+         </li>
+          <li>
+             <label for="apellidos">Apellidos</label>
+             <input type="text" name="apellidos" placeholder="Belenguer"/> 
+         </li>
+         <li>
+            <label for="foto">Foto</label>
+            <input type="file" name="foto"/>
+         </li>
+         <li>
+            <label for="genero" class="obligatorio">Genero</label>
+            <select id="genero" name="genero" required>
+                    <option value="" selected="selected">- selecciona -</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="Hombre">Hombre</option>
+            </select>
+         </li>
+         <li>
+            <label for="provincia" class="obligatorio">Provincia</label> 
+            <select id="provincia" name="provincia" required>
+                <option value="" selected="selected">- selecciona -</option>
+                <option value="01">Álava/Araba</option>
+                <option value="02">Albacete</option>
+                <option value="03">Alicante/Alacant</option>
+                <option value="04">Almería</option>
+                <option value="33">Asturias</option>
+                <option value="05">Ávila</option>
+                <option value="06">Badajoz</option>
+                <option value="07">Balears (Illes)</option>
+                <option value="08">Barcelona</option>
+                <option value="09">Burgos</option>
+                <option value="10">Cáceres</option>
+                <option value="11">Cádiz</option>
+                <option value="39">Cantabria</option>
+                <option value="12">Castellón/Castelló</option>
+                <option value="51">Ceuta</option>
+                <option value="13">Ciudad Real</option>
+                <option value="14">Córdoba</option>
+                <option value="15">Coruña (A)</option>
+                <option value="16">Cuenca</option>
+                <option value="17">Girona</option>
+                <option value="18">Granada</option>
+                <option value="19">Guadalajara</option>
+                <option value="20">Guipúzcoa/Gipuzkoa</option>
+                <option value="21">Huelva</option>
+                <option value="22">Huesca</option>
+                <option value="23">Jaén</option>
+                <option value="24">León</option>
+                <option value="27">Lugo</option>
+                <option value="25">Lleida</option>
+                <option value="28">Madrid</option>
+                <option value="29">Málaga</option>
+                <option value="52">Melilla</option>
+                <option value="30">Murcia</option>
+                <option value="31">Navarra</option>
+                <option value="32">Ourense</option>
+                <option value="34">Palencia</option>
+                <option value="35">Palmas (Las)</option>
+                <option value="36">Pontevedra</option>
+                <option value="26">Rioja (La)</option>
+                <option value="37">Salamanca</option>
+                <option value="38">Santa Cruz de Tenerife</option>
+                <option value="40">Segovia</option>
+                <option value="41">Sevilla</option>
+                <option value="42">Soria</option>
+                <option value="43">Tarragona</option>
+                <option value="44">Teruel</option>
+                <option value="45">Toledo</option>
+                <option value="46">Valencia/València</option>
+                <option value="47">Valladolid</option>
+                <option value="48">Vizcaya/Bizkaia</option>
+                <option value="49">Zamora</option>
+                <option value="50">Zaragoza</option>
+            </select>
+         </li>
+          <li>
+             <label for="telef">Telefono</label>
+             <input type="tel"  name="telef" placeholder="96 111 11 11" pattern="\d{9}$"/> 
+             <!-- pattern permite solo 9 dígitos (validación HTML5) -->
+         </li>
+         <li>
+             <label for="email" class="obligatorio">Email</label>
+             <input type="email" name="email" placeholder="natalia@ejemplo.com" required/> 
+             <!-- placeholder muestra texto gris orientativo -->
+         </li>
+         <li>
+             <label for="website">Sitio Web</label>
+             <input type="url" name="web" placeholder="http://ncoge.com" /> 
+             <!-- type="url" valida automáticamente que tenga formato de dirección web -->
+         </li>
+          <li>
+             <label for="edad"class="obligatorio">Edad</label>
+             <input type="number" name="edad" min="1" max="99" value="18" step="1"/>
+             <!-- type="number" crea un campo numérico con flechas -->
+             <!-- min establece el mínimo permitido -->
+             <!-- max establece el máximo -->
+             <!-- value es el valor inicial que aparece -->
+             <!-- step="1" obliga a introducir valores enteros -->
+         </li>
+        <li>
+          <button class="submit" type="submit">Guardar</button>
+        </li>
+      </ul>
+  </form>
+
+    <form class="formulario" action="#" method="post"> 
+    <!-- action="#" significa que no enviará datos a un servidor --> 
+    <!-- method="post" indica que enviará los datos de forma segura -->
+      <ul>
+         <li>
+              <h2>Descripción e intereses</h2>
+         </li>
+         <li>
+             <label for="descripcion">Descripción</label>
+             <p>Escribe una presentación divertida y original.</p>
+             <textarea name="Mensaje" cols="40" rows="6" placeholder="Nivel de aventura: dispuesta a probar cualquier cosa. Siempre estoy lista para descubrir nuevas emociones.Si el plan incluye risas, misterio o un poco de caos bien gestionado ¿Nos aliamos para la proxima mision?" >
+            </textarea required> <!-- cols y rows definen el tamaño -->
+         </li>
+         <li>
+            <label for="intereses">Intereses</label>
+            <p>Especifica que cosas te apasionan.</p>
+            <div class="arte">
+                <legend>🎨 ARTE & CREATIVIDAD</legend>
+                <input type="checkbox" name="arte" value="Arte"> Arte<br>
+                <input type="checkbox" name="pintura" value="Pintura"> Pintura<br>
+                <input type="checkbox" name="escultura" value="Escultura"> Escultura<br>
+                <input type="checkbox" name="ilustracion" value="Ilustración"> Ilustración<br>
+                <input type="checkbox" name="diseño" value="Diseño"> Diseño<br>
+                <input type="checkbox" name="caligrafia" value="Caligrafía"> Caligrafía<br>
+                <input type="checkbox" name="fotografia" value="Fotografía"> Fotografía<br>
+                <input type="checkbox" name="videos" value="Hacer vídeos"> Hacer vídeos<br>
+                <input type="checkbox" name="maquillaje" value="Maquillaje"> Maquillaje<br>
+                <input type="checkbox" name="manualidades" value="Manualidades"> Manualidades<br>
+                <input type="checkbox" name="costura" value="Costura"> Costura<br>
+                <input type="checkbox" name="reposteria" value="Repostería"> Repostería<br>
+                <input type="checkbox" name="escribir" value="Escribir"> Escribir<br>
+                <input type="checkbox" name="ceramica" value="Cerámica"> Cerámica<br>
+                <input type="checkbox" name="grabado" value="Grabado"> Grabado<br>
+                <input type="checkbox" name="origami" value="Origami"> Origami<br>
+                <input type="checkbox" name="modelado3d" value="Modelado 3D"> Modelado 3D<br>
+                <input type="checkbox" name="dibujo_digital" value="Dibujo digital"> Dibujo digital<br>
+                <input type="checkbox" name="restauracion_muebles" value="Restauración de muebles"> Restauración de muebles<br>
+                <input type="checkbox" name="arquitectura" value="Arquitectura"> Arquitectura<br>
+                <input type="checkbox" name="collage" value="Collage"> Collage<br>
+                <input type="checkbox" name="diseno_moda" value="Diseño de moda"> Diseño de moda<br>
+            </div>
+            <div class="musica">
+                <legend>🎵 MÚSICA & ESCENARIOS</legend>
+                <input type="checkbox" name="cantar" value="Cantar"> Cantar<br>
+                <input type="checkbox" name="bailar" value="Bailar"> Bailar<br>
+                <input type="checkbox" name="karaoke" value="Karaoke"> Karaoke<br>
+                <input type="checkbox" name="conciertos" value="Conciertos"> Conciertos<br>
+                <input type="checkbox" name="festivales" value="Festivales"> Festivales<br>
+                <input type="checkbox" name="espectaculos" value="Espectáculos en vivo"> Espectáculos en vivo<br>
+                <input type="checkbox" name="instrumento" value="Tocar instrumento"> Tocar instrumento<br>
+            </div>
+            <div class="deporte">
+                <legend>🏋️‍♂️ DEPORTE & ACTIVIDAD FÍSICA</legend>
+                <input type="checkbox" name="atletismo" value="Atletismo"> Atletismo<br>
+                <input type="checkbox" name="baloncesto" value="Baloncesto"> Baloncesto<br>
+                <input type="checkbox" name="balonmano" value="Balonmano"> Balonmano<br>
+                <input type="checkbox" name="bolos" value="Bolos"> Bolos<br>
+                <input type="checkbox" name="boxeo" value="Boxeo"> Boxeo<br>
+                <input type="checkbox" name="artes_marciales" value="Artes marciales"> Artes marciales<br>
+                <input type="checkbox" name="running" value="Running"> Running<br>
+                <input type="checkbox" name="yoga" value="Yoga"> Yoga<br>
+                <input type="checkbox" name="pilates" value="Pilates"> Pilates<br>
+                <input type="checkbox" name="natacion" value="Natación"> Natación<br>
+                <input type="checkbox" name="ciclismo" value="Ciclismo"> Ciclismo<br>
+                <input type="checkbox" name="escalada" value="Escalada"> Escalada<br>
+                <input type="checkbox" name="patinaje" value="Patinaje"> Patinaje<br>
+                <input type="checkbox" name="futbol" value="Fútbol"> Fútbol<br>
+                <input type="checkbox" name="crossfit" value="Crossfit"> Crossfit<br>
+                <input type="checkbox" name="gimnasio" value="Gimnasio"> Gimnasio<br>
+                <input type="checkbox" name="padel" value="Pádel"> Pádel<br>
+                <input type="checkbox" name="tenis" value="Tenis"> Tenis<br>
+                <input type="checkbox" name="voleibol" value="Voleibol"> Voleibol<br>
+                <input type="checkbox" name="trekking" value="Trekking"> Trekking<br>
+                <input type="checkbox" name="parkour" value="Parkour"> Parkour<br>
+                <input type="checkbox" name="remo" value="Remo"> Remo<br>
+                <input type="checkbox" name="rugby" value="Rugby"> Rugby<br>
+                <input type="checkbox" name="artes_aereas" value="Artes aéreas"> Artes aéreas<br>
+            </div>
+            <div class="naturaleza">
+                <legend>🌲 NATURALEZA & AVENTURA</legend>
+                <input type="checkbox" name="senderismo" value="Senderismo"> Senderismo<br>
+                <input type="checkbox" name="senderismo_nocturno" value="Senderismo nocturno"> Senderismo nocturno<br>
+                <input type="checkbox" name="acampadas" value="Acampadas"> Acampadas<br>
+                <input type="checkbox" name="barranquismo" value="Barranquismo"> Barranquismo<br>
+                <input type="checkbox" name="buceo" value="Buceo"> Buceo<br>
+                <input type="checkbox" name="escalada" value="escalada"> Escalada<br>
+                <input type="checkbox" name="espeleología" value="espeleología"> Espeleología<br>
+                <input type="checkbox" name="kayak" value="Kayak"> Kayak<br>
+                <input type="checkbox" name="pescar" value="Pescar"> Pescar<br>
+                <input type="checkbox" name="playas" value="Playas"> Playas<br>
+                <input type="checkbox" name="rafting" value="Rafting"> Rafting<br>
+                <input type="checkbox" name="surf" value="Surf"> Surf<br>
+                <input type="checkbox" name="jardineria" value="Jardinería"> Jardinería<br>
+                <input type="checkbox" name="astronomia" value="Astronomía"> Astronomía<br>
+                <input type="checkbox" name="viajar" value="Viajar"> Viajar<br>
+                <input type="checkbox" name="montanismo" value="Montañismo"> Montañismo<br>
+                <input type="checkbox" name="observacion_aves" value="Observación de aves"> Observación de aves<br>
+                <input type="checkbox" name="esqui" value="Esquí"> Esquí<br>
+                <input type="checkbox" name="snowboard" value="Snowboard"> Snowboard<br>
+                <input type="checkbox" name="huerto" value="Huerto casero"> Huerto casero<br>
+                <input type="checkbox" name="geocaching" value="Geocaching"> Geocaching<br>
+            </div>
+               <div class="entretenimiento">
+                <legend>🎯 JUEGOS & ENTRETENIMIENTO</legend>
+                <input type="checkbox" name="ajedrez" value="Ajedrez"> Ajedrez<br>
+                <input type="checkbox" name="cine" value="Cine"> Cine<br>
+                <input type="checkbox" name="juegos_mesa" value="Juegos de mesa"> Juegos de mesa<br>
+                <input type="checkbox" name="videojuegos" value="Videojuegos"> Videojuegos<br>
+                <input type="checkbox" name="escape_rooms" value="Escape rooms"> Escape rooms<br>
+                <input type="checkbox" name="coleccionismo" value="Coleccionismo"> Coleccionismo<br>
+                <input type="checkbox" name="airsoft" value="Airsoft / Paintball"> Airsoft / Paintball<br>
+                <input type="checkbox" name="rol_mesa" value="Rol en mesa"> Rol en mesa<br>
+                <input type="checkbox" name="puzzles" value="Puzzles"> Puzzles<br>
+                <input type="checkbox" name="realidad_virtual" value="Realidad virtual"> Realidad virtual<br>
+            </div>
+            </div>
+               <div class="cultura">
+                <legend>📚 LECTURA & CULTURA</legend>
+                <input type="checkbox" name="leer" value="Leer"> Leer<br>
+                <input type="checkbox" name="club_lectura" value="Club de lectura"> Club de lectura<br>
+                <input type="checkbox" name="museos" value="Museos"> Museos<br>
+                <input type="checkbox" name="podcasts" value="Escuchar podcasts"> Escuchar podcasts<br>
+                <input type="checkbox" name="poesia" value="Poesía"> Poesía<br>
+                <input type="checkbox" name="historia" value="Historia"> Historia<br>
+                <input type="checkbox" name="filosofia" value="Filosofía"> Filosofía<br>
+                <input type="checkbox" name="documentales" value="Documentales"> Documentales<br>
+                <input type="checkbox" name="teatro" value="Teatro"> Teatro<br>
+                <input type="checkbox" name="mitologia" value="Mitología"> Mitología<br>
+                <input type="checkbox" name="idiomas" value="Aprender idiomas"> Aprender idiomas<br>
+            </div>
+            <div class="planes">
+                <legend>🍽️ GASTRONOMÍA & PLANES SOCIALES</legend>
+                <input type="checkbox" name="cocinar" value="Cocinar"> Cocinar<br>
+                <input type="checkbox" name="comer_fuera" value="Comer fuera"> Comer fuera<br>
+                <input type="checkbox" name="comida_sana" value="Comida sana"> Comida sana<br>
+                <input type="checkbox" name="bares" value="Bares"> Bares<br>
+                <input type="checkbox" name="discotecas" value="Discotecas"> Discotecas<br>
+                <input type="checkbox" name="parques_tematicos" value="Parques temáticos"> Parques temáticos<br>
+                <input type="checkbox" name="pasear" value="Pasear"> Pasear<br>
+                <input type="checkbox" name="picnic" value="Picnic"> Picnic<br>
+                <input type="checkbox" name="cata_vinos" value="Cata de vinos"> Cata de vinos<br>
+                <input type="checkbox" name="cata_cervezas" value="Cata de cervezas artesanales"> Cata de cervezas artesanales<br>
+                <input type="checkbox" name="cocteleria" value="Coctelería"> Coctelería<br>
+                <input type="checkbox" name="comida_internacional" value="Comida internacional"> Comida internacional<br>
+                <input type="checkbox" name="brunch" value="Brunch"> Brunch<br>
+                <input type="checkbox" name="cafe_especialidad" value="Café de especialidad"> Café de especialidad<br>
+                <input type="checkbox" name="ferias_gastronomicas" value="Ferias gastronómicas"> Ferias gastronómicas<br>
+            </div>
+            <div class="vida">
+                <legend>🐾 ESTILO DE VIDA</legend>
+                <input type="checkbox" name="animales" value="Animales"> Animales<br>
+                <input type="checkbox" name="voluntariado" value="Voluntariado"> Voluntariado<br>
+                <input type="checkbox" name="meditacion" value="Meditación"> Meditación<br>
+                <input type="checkbox" name="pasear_perros" value="Pasear perros"> Pasear perros<br>
+                <input type="checkbox" name="mascotas_exoticas" value="Mascotas exóticas"> Mascotas exóticas<br>
+                <input type="checkbox" name="observacion_fauna" value="Observación de fauna"> Observación de fauna<br>
+                <input type="checkbox" name="rescate_animal" value="Rescate animal"> Rescate animal<br>
+                <input type="checkbox" name="acuariofilia" value="Acuariofilia"> Acuariofilia<br>
+                <input type="checkbox" name="terapia_animal" value="Terapia con animales"> Terapia con animales<br>
+                <input type="checkbox" name="apicultura" value="Apicultura"> Apicultura<br>
+                <input type="checkbox" name="plantas_raras" value="Plantas raras"> Plantas raras<br>
+                <input type="checkbox" name="feng_shui" value="Feng Shui"> Feng Shui<br>
+                <input type="checkbox" name="tai_chi" value="Tai chi"> Tai chi<br>
+            </div>   
+         </li>
+        <li>
+          <button class="submit" type="submit">Guardar</button>
+        </li>
+      </ul>
+  </form>
+    <form class="formulario" action="#" method="post"> 
+    <!-- action="#" significa que no enviará datos a un servidor -->
+    <!-- method="post" indica que enviará los datos de forma segura -->
+      <ul>
+         <li>
+              <h2>Biografía</h2>
+         </li>
+         <li>
+            <label for="vida">Mi vida</label>
+             <p>Comparte en que punto de tu vida estás.</p>
+             <textarea name="Mensaje" cols="40" rows="6" placeholder="Estoy en un momento de mi vida en el que me abrazo con mi pasado, disfruto mi presente y construyo mi futuro." >
+            </textarea required> <!-- cols y rows definen el tamaño -->
+         </li>
+         <li>
+            <label for="nacionalidad">Nacionalidad</label>
+            <p>Escribe tu pais y ciudad de origen</p>
+            <div class="pais">
+                <legend>Pais</legend>
+                <input type="text" name="pais"/> 
+            </div>
+            <div class="ciudad">
+                <legend>Ciudad</legend>
+                <input type="text" name="ciudad"/> 
+            </div>  
+        </li>
+        <li>
+            <label for="trabajo">Trabajo</label>
+            <div class="empresa">
+                <legend>Empresa</legend>
+                <input type="text" name="empresa"/>
+            </div>
+            <div class="cargo">
+                <legend>Cargo</legend>
+                <input type="text" name="cargo"/>  
+            </div>
+        </li>
+        <li>
+            <label for="sexualidad">Sexualidad</label>
+            <div class="sexualidad"> 
+                <input type="checkbox" name="sexualidad" value="heterosexual" /> Heterosexual<br>
+                <input type="checkbox" name="sexualidad" value="homosexual" /> Homosexual<br>
+                <input type="checkbox" name="sexualidad" value="bisexual" /> Bisexual<br>
+                <input type="checkbox" name="sexualidad" value="pansexual" /> Pansexual<br>
+                <input type="checkbox" name="sexualidad" value="asexual" /> Asexual<br>
+                <input type="checkbox" name="sexualidad" value="demisexual" /> Demisexual<br>
+                <input type="checkbox" name="sexualidad" value="queer" /> Queer<br>
+                <input type="checkbox" name="sexualidad" value="otro" /> Otro<br>
+            </div>
+        </li>
+        <li>
+            <label for="relaciones">Relaciones</label>
+            <p>Indica que relacion tienes y/o buscas</p>
+            <div class="estado">
+                    <legend>Estado</legend>
+                    <input type="radio" name="relacion" value="Relación abierta"> Relación abierta<br>
+                    <input type="radio" name="relacion" value="Relación monógama"> Relación monógama<br>
+                    <input type="radio" name="relacion" value="Relación a distancia"> Relación a distancia<br>
+                    <input type="radio" name="relacion" value="Relación poliamorosa"> Relación poliamorosa<br>
+                    <input type="radio" name="relacion" value="Relación sin etiquetas"> Relación sin etiquetas<br>
+                    <input type="radio" name="relacion" value="Soltero/a"> Soltero/a<br>
+            </div>
+            <div class="busco">
+                    <legend>Busco</legend>
+                    <input type="checkbox" name="busco_pareja" value="Busco pareja"> Busco pareja<br>
+                    <input type="checkbox" name="busco_amigos" value="Busco amigos"> Busco amigos <br>
+                    <input type="checkbox" name="relaciones_casuales" value="Relaciones casuales"> Relaciones casuales<br>
+                    <input type="checkbox" name="amigos_con_derecho" value="Amigos con derecho"> Amigos con derecho<br>
+                    <input type="checkbox" name="citas_sin_compromiso" value="Citas sin compromiso"> Citas sin compromiso<br>
+                    <input type="checkbox" name="conocer_gente" value="Conocer gente nueva"> Conocer gente nueva<br>
+                    <input type="checkbox" name="explorar" value="Explorar mi sexualidad"> Explorar mi sexualidad<br>
+            </div>
+        </li>
+        <li>
+            <label for="hijos">Hijos</label>
+            <div class="hijos">
+                <input type="checkbox" name="sin_hijos" value="Sin hijos"> Sin hijos<br>
+                <input type="checkbox" name="esperando_bebe" value="Esperando un bebé"> Esperando un bebé<br>
+                <input type="checkbox" name="bebes" value="Bebé(s)"> Bebé(s)<br>
+                <input type="checkbox" name="edad_escolar" value="Edad escolar"> Edad escolar<br>
+                <input type="checkbox" name="adolescencia" value="Adolescencia"> Adolescencia<br>
+                <input type="checkbox" name="adulto" value="Adulto(s)"> Adulto(s)<br>
+            </div>
+        </li>
+        <li>
+            <label for="idiomas">Idiomas</label>
+            <div class="idiomas">
+                <input type="checkbox" name="espanol" value="Español"> Español<br>
+                <input type="checkbox" name="ingles" value="Inglés"> Inglés<br>
+                <input type="checkbox" name="frances" value="Francés"> Francés<br>
+                <input type="checkbox" name="aleman" value="Alemán"> Alemán<br>
+                <input type="checkbox" name="italiano" value="Italiano"> Italiano<br>
+                <input type="checkbox" name="portugues" value="Portugués"> Portugués<br>
+                <input type="checkbox" name="ruso" value="Ruso"> Ruso<br>
+                <input type="checkbox" name="arabe" value="Árabe"> Árabe<br>
+                <input type="checkbox" name="chino" value="Chino mandarín"> Chino mandarín<br>
+                <input type="checkbox" name="japones" value="Japonés"> Japonés<br>
+                <input type="checkbox" name="coreano" value="Coreano"> Coreano<br>
+                <input type="checkbox" name="hindi" value="Hindi"> Hindi<br>
+                <input type="checkbox" name="bengali" value="Bengalí"> Bengalí<br>
+                <input type="checkbox" name="turco" value="Turco"> Turco<br>
+                <input type="checkbox" name="neerlandes" value="Neerlandés"> Neerlandés<br>
+                <input type="checkbox" name="sueco" value="Sueco"> Sueco<br>
+                <input type="checkbox" name="polaco" value="Polaco"> Polaco<br>
+                <input type="checkbox" name="ucraniano" value="Ucraniano"> Ucraniano<br>
+                <input type="checkbox" name="griego" value="Griego"> Griego<br>
+                <input type="checkbox" name="rumano" value="Rumano"> Rumano<br>
+                <input type="checkbox" name="filipino" value="Filipino"> Filipino<br>
+                <input type="checkbox" name="indonesio" value="Indonesio"> Indonesio<br>
+                <input type="checkbox" name="vietnamita" value="Vietnamita"> Vietnamita<br>
+            </div>
+        <li>
+          <button class="submit" type="submit">Guardar</button>
+        </li>
+      </ul>
+  </form>
+
+    <footer>   
+        <div class="logo">
+            <img src="imagenes/nbslogo.png" alt="logo">
+        </div>
+        <div class="eslogan">
+            <p>Tu próxima historia empieza con un match.</p>    
+        </div>
+        <div class="autor">
+            <a href="https://github.com/natbelsan">Github natbelsan</a>
+        </div>
+    </footer>
+</body>
+</html>
