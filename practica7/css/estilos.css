@@ -6,7 +6,7 @@ body {
   background: url('../images/fondo.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: cover; /* redimensiona una imagen de fondo para cubrir completamente el área de su contenedor */
   background-attachment: fixed; /*fondo fijo*/
   font-family: 'Indie Flower', cursive;
 }
@@ -202,7 +202,7 @@ p {
     /* necesitas 1 instruccion*/
     float: none;/*1: */
     text-align: center;
-    clear: both;
+    clear: both; /* La propiedad clear permite modificar el comportamiento por defecto del posicionamiento flotante para forzar a un elemento a mostrarse debajo de cualquier caja flotante.*/
     padding-bottom: 5px;
   }
   

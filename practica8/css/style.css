@@ -1,0 +1,222 @@
+body { 
+    font-family: 'Indie Flower', 'Patrick Hand', 'Handlee', 'Shadows Into Light', 'Comic Neue', cursive;
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0;
+    background-image: url('../images/fondo.jpg');
+    background-attachment: fixed; /*fondo fijo*/
+    background-size: cover; /*cubrir todo el espacio del elemento*/
+    background-position: center 20px;
+    background-repeat: no-repeat;
+}
+
+header{
+  top: 0;  /* Posicionado arriba de la página */
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed white;
+  position: fixed; /* siempre visible */
+  width: 100%;
+  background: #1a252f;    
+  padding: 10px;
+}
+
+header ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0; 
+}
+
+header li {
+  display: inline-block; /* Colocamos los li en horizontal */
+  margin: 0 3px;
+}
+
+header a {
+  color: white;
+  text-decoration: none; /* sin subrayado */
+  font-weight: bold; /*negrita*/
+  padding-bottom: 6px;
+}
+
+header a:hover {
+  border-bottom: 4px solid #a3bffa;
+}
+
+#empresa {
+    background-image: url(../images/tatoo-logo3.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: flex;/*El elemento padre controla la colocación de sus hijos*/
+    flex-direction: column; /*Establece la dirección del eje principal en vertical*/
+    height: 350px;
+    padding-left: 150px;
+    padding-top: 60px;
+    justify-content: center; /*colocar los ítems de un contenedor mediante una disposición concreta a lo largo del eje principal*/
+    text-align: left; /*alinear los ítems en el eje secundario del contenedor*/
+    border-bottom: 5px solid  #1a252f;
+}
+
+header, .header a, #empresa, footer, footer a, .button {
+    color: white;
+}
+
+h1{
+    font-size: 3em;
+    margin: 1em;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000
+}
+ #empresa p{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1em;
+    text-shadow: -2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000; 
+    /*desplazamientoX desplazamientoY desenfoque color*/
+ }
+
+ #cookies{
+    text-align: center;
+    background-color: #f5e6e0;
+    position: absolute; /*posicion absoluta respecto al body*/
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    border: 2px solid #a3bffa;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1a252f;
+    margin-bottom: 5px;    
+ }
+
+ .aviso_cookies{
+    text-align: center;
+ }
+
+ .button{
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    padding: 15px 35px;
+    margin-bottom: 6px;
+    background-color: #3a4d6b;
+    display: inline-block;
+    cursor: pointer;   
+ }
+
+ #content{
+    width: 100%;
+    background-color: #3a4d6b;
+    overflow: auto; /* Evita problemas con elementos flotados */
+    
+}
+
+ #presentacion{
+    width: 80%;
+    float: left;
+    color: #1a252f;
+    border-right: 1px dashed #a3bffa;
+ }
+
+ #presentacion1, #presentacion2{
+    border-radius: 30px;
+    border: 1px dashed #1a252f;
+    text-align: justify;
+    overflow: auto; /* Controla floats internos */
+    padding: 10px;
+    background-color: #d4a59a;
+ }
+#presentacion1{
+  margin: 10px 5% 20px 1%; /*t, r, b, l*/
+}
+#presentacion2{
+    clear: both; /* Baja debajo de elementos flotados */
+    margin-left: 1%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+}
+
+.image_p1{
+    float: right;
+    border: 3px solid #a3bffa;
+    border-radius: 25px;
+    margin: 15px;
+}
+.image_p2{
+    float: left;
+    border: 3px solid #a3bffa;
+    border-radius: 25px;
+    margin: 15px;
+}
+
+img{
+    /*margin: 10px;*/
+    border-radius: 25px;
+}
+
+#contacto{
+    float: right;
+    width: 15%;
+    margin-top: 10px;
+    margin-right: 1%;
+    margin-top: 10px;
+}
+
+#contacto ul{
+    padding-inline-start: 40px;
+}
+
+#contacto li{
+    list-style: none;
+    display: list-item;
+}
+
+a :hover{
+    cursor: pointer;
+    border-bottom: 4px solid #a3bffa;    
+}
+
+footer{
+    position: fixed; /* siempre visible */
+    bottom: 0; /*Fijar abajo*/
+    clear: both; /* Evita que flote junto a otros elementos */
+    width: 100%;
+    background-color: #1a252f;    
+    text-align: center; /* Centra el texto horizontalmente */
+    border: 2px solid #a3bffa;   
+}
+footer a{
+    text-decoration: none;
+}
+
+@media all and (max-width: 500px){
+      #contacto, #presentacion{
+        width: 100%;
+        text-align: center;
+      }
+
+      .image_p1, .image_p2 {
+        width: 90%;
+        text-align: center;
+      }
+
+      img{
+        width: 100%;
+      }
+
+      #contacto{
+        margin-bottom: 20%;
+        border-top: 2px dashed #a3bffa;
+      }
+
+      #contacto li{
+        display: inline; /*Poner en horizontal*/   
+      }
+      
+      #contacto a{
+        text-decoration: none;
+      }
+
+      #contacto img{
+        width: 10%;
+      }    
+}
