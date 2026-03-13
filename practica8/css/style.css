@@ -47,6 +47,7 @@ header a:hover {
     background-position: left center;
     background-repeat: no-repeat;
     display: flex;/*El elemento padre controla la colocación de sus hijos*/
+    /*inline-flex es igual que flex, pero hace que el padre ocupe el espacio mínimo imprescindible en lugar de todo el posible hasta el borde del navegador*/
     flex-direction: column; /*Establece la dirección del eje principal en vertical*/
     height: 350px;
     padding-left: 150px;
