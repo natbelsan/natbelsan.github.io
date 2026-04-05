@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #0056b3;
+      margin-bottom: 3em;
+    }
+
+    #weather {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      font-size: 1em;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 5px 10px;
+      font-size: 1em;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003d80;
+    }
+  </style>
+</head>
+<body> 
+  <h1 id="titulo">Clima actual</h1>
+  <p id="weather">Cargando...</p>
+
+  <form action="#" method="get">
+    <label for="city">Ciudad:</label>
+    <input type="text" id="city" name="city" value="Valencia">
+    <button type="button" id="boton">Actualizar</button>
+  </form>
+
+  <script>
+    // URL de la API con tu clave (sustituye 'TU_API_KEY' por tu clave real)
+    const apiKey = 'a9e07b03feec00fd6872e69c83b56b32';
+    let titulo = document.getElementById('titulo');
+    let boton=document.getElementById('boton'); 
+    let inputCiudad = document.getElementById('city');
+    boton.addEventListener('click', function() {
+      event.preventDefault(); // Evita que el formulario se envíe
+      obtenerClima();
+    });
+
+    // Detectar la tecla Enter en el campo de texto
+    inputCiudad.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault(); // Evita que el formulario se envíe
+        obtenerClima(); // Llama a la función obtenerClima()
+      }
+    });
+
+    // Función para buscar varias ciudades
+    function obtenerClima() {
+      const ciudad = inputCiudad.value;
+
+      let url = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad}&limit=5&lang=es&appid=${apiKey}`;
+
+      titulo.innerHTML = "Resultados para: " + ciudad;
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error en geolocalización');
+          }
+          return response.json();
+        })
+        .then(data => {
+
+          // Limpiar resultados
+          document.getElementById('weather').innerHTML = "";
+
+          // Si no hay resultados
+          if (data.length === 0) {
+            document.getElementById('weather').textContent = "No se encontraron ciudades";
+            return;
+          }
+
+          // Recorrer ciudades
+          data.forEach(localidad => {
+            obtenerClimaCiudad(localidad);
+          });
+
+        })
+        .catch(error => {
+          document.getElementById('weather').textContent =
+            `Error: ${error.message}`;
+        });
+    }
+     // FUNCIÓN PARA OBTENER EL CLIMA DE CADA CIUDAD
+    function obtenerClimaCiudad(localidad) {
+
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${localidad.lat}&lon=${localidad.lon}&lang=es&units=metric&appid=${apiKey}`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const temperature = data.main.temp;
+          const description = data.weather[0].description;
+          const humidity = data.main.humidity;
+
+          // Crear bloque visual
+          let info = document.createElement("div");
+
+          info.innerHTML = `
+            <p>
+              <strong>${localidad.name} (${localidad.country})</strong><br>
+              🌡️ Temperatura: ${temperature}°C<br>
+              ☁️ Clima: ${description}<br>
+              💧 Humedad: ${humidity}%
+            </p>
+            <hr>
+          `;
+
+          document.getElementById('weather').appendChild(info);
+        })
+        .catch(error => {
+          console.error("Error en clima:", error);
+        });
+    }
+
+    // Llamamos a la función para obtener el clima al cargar la página
+        obtenerClima();
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+    * { 
+        box-sizing: border-box; 
+        margin: 0; 
+        padding: 0; 
+    }
+    body { 
+        font-family: 'Arial', sans-serif; 
+        background-color: #121212; 
+        color: #f0f0f0; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px; 
+    }
+
+    h1 { 
+        margin-bottom: 5px; 
+    }
+    h2 { 
+        margin-bottom: 20px; 
+        font-weight: normal; 
+        color: #aaa; 
+    }
+
+    .controls { 
+        display: 
+        flex; gap: 10px; 
+        margin-bottom: 20px; 
+        flex-wrap: wrap; 
+    }
+
+    input, select, button { 
+        padding: 10px; 
+        border-radius: 5px; 
+        border: none; 
+        font-size: 1rem; 
+    }
+
+    input, select { 
+        width: 120px; 
+    }
+
+    button { 
+        background-color: #1e88e5; 
+        color: white; 
+        cursor: pointer; 
+        transition: background-color 0.2s ease; 
+    }
+
+    button:hover { 
+        background-color: #1565c0; 
+    }
+
+    #resultado ul { 
+        list-style: none; 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 15px; 
+        margin: 20px auto; /* Top:20px y centra horizontalmente */
+        padding: 0;
+        width: 55%;    
+    }
+
+    #resultado li {
+        background-color: #1f1f1f;
+        padding: 15px 20px;
+        border-radius: 10px;
+        flex: 1 1 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        transition: transform 0.2s ease;
+    }
+
+    #resultado li:hover { 
+        transform: scale(1.05); 
+        background-color: #2a2a2a; 
+    }
+
+    .currency-code {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+    .currency-name { 
+        font-weight: bold; 
+        font-size: 0.9em;
+        color: #555;
+        margin-bottom: 0.2em;
+        text-align: center;
+    }
+    
+    .conversion {
+        font-size: 1.5em;
+        color: white;
+        text-align: center;
+    }
+    .base_conver {
+        font-size: 0.5em;
+        color: white;
+        text-align: center;
+    }
+    .unit-rate { 
+        font-size: 0.85rem; 
+        color: #ccc; 
+    }
+

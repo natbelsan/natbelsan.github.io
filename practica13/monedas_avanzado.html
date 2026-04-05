@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de divisas</title>
+    <link rel="stylesheet" href="css/monedas.css">
+</head>
+<body>
+    <h1>Conversor de divisas</h1>
+    <h2>con https://frankfurter.dev/</h2>
+
+    <div class="controls">
+        Cantidad: <input type="number" id="cantidad" value="100">
+        Moneda origen:
+        <select id="moneda">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CHF">CHF</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+            <option value="CNY">CNY</option>
+        </select>
+        <button id="convertir">Convertir</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script src="js/monedas.js"></script>
+</body>
+</html>

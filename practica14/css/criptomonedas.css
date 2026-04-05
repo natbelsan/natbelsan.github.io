@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+input[type="number"],
+input[type="button"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+
+input[type="number"] {
+    width: 150px;
+}
+
+
+input[type="button"] {
+    background-color: #1e88e5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #1565c0;
+}
+
+
+.resultados ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+.resultados li {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 12px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.resultados li:hover {
+    transform: scale(1.05);
+    background-color: #2a2a2a;
+}
+
+
+.crypto-code {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+.crypto-value {
+    font-size: 0.7em;
+    color: #ffffff;
+    
+}
+
+.crypto-rate {
+    font-size: 0.7em;
+    color: #ccc;
+}
+
+.error {
+    margin-top: 15px;
+    color: #ff5252;
+}
+

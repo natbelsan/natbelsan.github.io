@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor criptomonedas</title>
+  <link rel="stylesheet" href="css/criptomonedas.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Conversor de criptomonedas</h1>
+
+    <div class="formulario">
+      Cantidad: <input type="number" id="cantidad" value="100" min="0" step="0.01">
+      Moneda:
+      <select id="moneda">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+      </select>
+      <input type="button" id="convertir" value="Convertir">
+    </div>
+
+    <div id="resultados" class="resultados"></div>
+    <p id="error" class="error"></p>
+  </div>
+  <script src="js/criptomonedas.js"></script>
+</body>
+</html>
